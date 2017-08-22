@@ -1,0 +1,18 @@
+@font-face {
+  font-family: gohu;
+  src: url(../fonts/gohufont.ttf);
+}
+
+@font-face {
+  font-family: gohu14;
+  src: url(../fonts/gohufont14.ttf);
+}
+.gohu {
+  font-family: gohu;
+  font-size: 11px;
+}
+
+.gohu-14 {
+  font-family: gohu14;
+  font-size: 14px;
+}
