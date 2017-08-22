@@ -1,0 +1,106 @@
+                            .
+        ,-. ,-. ,-. . . ,-. . |- . .
+        `-. |-' |   | | |   | |  | |
+        `-' `-' `-' `-^ '   ' `' `-|
+        --------------------------/|-
+                                 `-'
+
+Allowing a user access to your system over a 
+network is a security risk. This includes 
+email, web, and other network services.
+
+Any time a remote user's actions cause 
+applications to run on your system, you are
+in danger of having your system comprimised
+through a flaw in the designs of any one of
+the pieces that make that application run. 
+
+One very common entry point for malicious 
+users is the dynamic cgi script, and in 
+particular, the execution of arbitrary code 
+by a dynamic cgi script.
+
+We understand this possibility, and have
+attempted to harden ASCIIweb against such
+an attack. However, no software is bullet-
+proof. Therefore it is your responsibility
+as a system administrator or user to 
+consider the risks involved and make sure
+that your actions are prudent and 
+acceptable.
+
+<b>STATIC MODE</b>
+----------
+
+You can avoid all the security hassles of 
+dynamic cgi scripts by not running it as a
+cgi! Instead, use static mode to render the
+pages from your source files, removing the 
+ability of an attacker to run any programs
+not already allowed by your webserver. This
+method takes out all the potential cgi
+attacks. It also removes any  additional 
+load your server might experience because 
+of ASCIIweb. 
+
+Unfortunately, static page generation  also 
+eliminates many of ASCIIweb's cooler features.
+
+<b>OTHER FEATURES</b>
+--------------
+
+ASCIIweb has several features designed to 
+help run aw as a cgi while still maintaining 
+the level of security you are comfortable with.
+
+<b><font color='#ffff00'>docdir</font></b> is the directory under which all documents
+must live if ASCIIweb is to display them, and
+is roughly equivalent to Apache's 
+DocumentRoot option. This keeps users from 
+successfully reading files which should not be 
+visible to web users (like /etc/passwd).
+
+Example:
+docdir=/var/www/tastytronic.net/asciiweb/test/
+
+ASCIIweb checks the absolute path of any 
+requested files using Perl's CWD::abs_path
+function and verifies that it lies within
+docdir, thus stopping the traditional
+/../../../etc/passwd attack.
+
+<b>SCRIPTS</b>
+<b>-------</b>
+
+<b><font color='#ffff00'>scriptdir</font></b> is like docdir for scripts. Scriptdir
+is the document directory for secondary
+scripts. This encourages your administrator to
+specify by hand the scripts or binaries
+allowed to be run by ASCIIweb. Any executables
+not in or symlinked to scriptdir will not
+run. Your scriptdir must be within your docdir.
+
+<b><font color='#ffff00'>allowexecute</font></b> is the conf directive that specifies
+whether included scripts may be run. ASCIIweb is
+able to incorporate the output of secondary 
+scripts into it's normal output. This can be 
+useful for displaying up-to-the minute stats
+such as system load, or system time. However,
+it is an additional security risk. You may
+prefer to disable it.
+
+Example:
+allowexecute=1
+or
+allowexecute=0
+
+<b><font color='#ffff00'>executepage</font></b> is related to allowexecute. If users
+are allowed to include script output, are they
+allowed to use secondary scripts which provide
+the complete output for a page? This is a 
+greater security risk as it potentially allows
+a remote user to see filenames and paths of
+secondary scripts. 
+
+Back: Editing                        Next: Tricks
+<a href="editing.rfk">&lt;--</a>                                           <a href="tricks.rfk">--&gt;</a>

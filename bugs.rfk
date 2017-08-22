@@ -1,0 +1,31 @@
+                     BUGS
+                     ----
+
+There are a number of bugs in ASCIIweb, and I
+am just beginning to catalog them. Please feel
+free to email me at <a href="mailto:pedro@tastytronic.net">pedro@tastytronic.net</a> with 
+bug reports.
+
+The Buglist:
+------------
+
+<b>OPEN</b>:
+
+1. Italics do not seem to work properly, but
+   they should work just like bold tags.
+
+2. Local hyperlinks referring to anchors like
+   "foo.rfk#bar" do not work properly. This
+   should be a simple thing to fix. The
+   workaround is to refer to them like so:
+   "aw.cgi?main=foo.rfk#bar"
+
+<b>CLOSED:</b>
+
+1. ASCIIweb was able to read filesystem docs
+   like /etc/passwd. Implemented 'docdir'
+   parameter, which utilizes an "absolute 
+   path" function in Perl.
+
+
+<a href="http://tastytronic.net/asciiweb/aw.cgi?main=documents.rfk">&lt;&lt; go to online documentation...</a>

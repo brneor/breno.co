@@ -1,0 +1,41 @@
+        _   _   _   _   _   _   _   _
+       / \ / \ / \ / \ / \ / \ / \ / \
+      ( A | S | C | I | I | w | e | b )
+       \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/
+ 
+
+Is a useful tool for formatting good-looking and
+creative websites using all ASCII text and no
+raster graphics. And you thought a website that
+looked as good in lynx as it did in mozilla was
+an impossibility!
+
+ASCIIweb operates similar to the notion of frames 
+in HTML where separate frames load separate 
+documents which appear to be unified. However,
+where frames use browser rendering, ASCIIweb
+stitches the documents together itself and uses
+the &lt;pre&gt; tag to insure that the browser
+respects the preformatted text. Thankfully,
+&lt;pre&gt; tags also allow anchors and font tags,
+so one can make interesting and functional looking
+websites with good-old ASCII-art knowhow.
+
+ASCIIweb currently utilizes 5 spaces -- the left
+menu, right menu, header, footer, and main
+sections, and will load information from the
+filesystem as well as from the web. This allows
+ASCIIweb to do some neat tricks, like live 
+rendering of Apache directory listings. ASCIIweb
+can also run scripts in the background and either
+embed their output in a static document, or use
+the output of the script AS the document.
+
+Click on the above links for examples of
+ASCIIweb's features, or click here to learn how
+to set up your own ASCIIweb installation.
+
+                                            Next:
+                                       Installing
+                                              <a href="install.rfk">--&gt;</a>
+ 

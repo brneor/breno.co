@@ -1,0 +1,37 @@
+        .      .                    .
+    ,-. |- ,-. |- . ,-. ,-,-. ,-. ,-| ,-.
+    `-. |  ,-| |  | |   | | | | | | | |-'
+    `-' `' `-^ `' ' `-' ' ' ' `-' `-^ `-'
+
+'Staticmode' allows users to generate pages
+statically so as to reduce load and/or mitigate
+security issues that dynamic cgi scripts may
+pose to your server. 
+
+The process is currently primitive but
+functional. Simply call aw.cgi on the .rfk file
+for which you would like to generate the
+corresponding .html file:
+
+aw.cgi --static index.rfk > index.html
+
+(Should you leave off the '> index.html' 
+ASCIIweb will output to standard out.)
+
+In static mode, ASCIIweb will convert all 
+hyperlinks to point to the corresponding 
+staticmode files -- any URL for an .rfk file
+will be converted to a URL for an .html file
+in the same location -- this way, users should
+be able to switch between static and dynamic
+page generation without too much trouble.
+
+At some point we will include scripts or
+functionality for recursive generation of all
+.rfk files in a directory -- for now you'll need
+to take care of that yourself if you wish to do
+so.
+
+Back: Tricks                          Next: RFKML 
+<a href="tricks.rfk">&lt;--</a>                                           <a href="rfkml.rfk">--&gt;</a>
+

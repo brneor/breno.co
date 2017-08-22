@@ -1,0 +1,31 @@
+                         .   .
+           ,-. ,-. ,-. ,-| . |- ,-.
+           |   |   |-' | | | |  `-.
+           `-' '   `-' `-^ ' `' `-'
+	       
+
+ASCIIweb has been a work in progress for
+several years. It was first a shell script
+which combined columns of text statically for
+the old robotfindskitten webpage. Eventually I
+got it in my head to make it dynamic, and so it 
+was completely overhauled and written in Perl.
+
+I am still quite a novice programmer -- and so 
+many friends along the way have helped out or
+provided good feedback.
+
+Peter A. Peterson -- author
+
+Sam Phillips -- essentially wrote the first
+    ASCIIweb because I didn't know how.
+Sean Neakums -- assistance and advice
+
+Nick Moffitt, Neale Pickett, Stephane Miller,
+Nate Riffe, and the gang at #tron on
+irc.slashnet.org for assistance, ideas, and 
+advice.
+	      
+Back: RFKML                         Next: License 
+<a href="rfkml.rfk">&lt;--</a>                                           <a href="COPYING.rfk">--&gt;</a>
+

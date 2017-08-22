@@ -1,0 +1,29 @@
+             .            .
+             |- ,-. . ,-. | , ,-.
+             |  |   | |   |<  `-.
+             `' '   ' `-' ' ` `-'
+             --------------------
+
+There are all kinds of neat tricks you can 
+do with ASCIIweb. 
+
+Probably the most obvious "feature" of ASCIIweb
+is the live Apache directory listing. That feature
+allows you to use the built-in directory listing
+of Apache to create live filesystem directories
+for file management -- photos, software releases,
+etc. What's more, you don't have to do anything
+to use it other than run ASCIIweb in dynamic mode.
+
+The other major feature ASCIIweb provides is the
+"conf file" system. Conf files allow you to define
+custom "window dressing" for any individual
+"content" pages, including Apache directories. By 
+setting custom window dressing, you can create 
+custom menus for individual documents, such as
+tables of contents, informational headers, and 
+fun ASCII-art "animations" such as depressed
+buttons and highlights.
+
+Back: Security                   Next: Staticmode 
+<a href="security.rfk">&lt;--</a>                                           <a href="staticmode.rfk">--&gt;</a>

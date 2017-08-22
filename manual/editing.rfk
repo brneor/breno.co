@@ -1,0 +1,108 @@
+                .   .
+          ,-. ,-| . |- . ,-. ,-.
+          |-' | | | |  | | | | |
+          `-' `-^ ' `' ' ' ' `-|
+        ----------------------,|--
+                              `'
+
+Editing .rfk files is the trickiest thing about
+using ASCIIweb. Because of the fixed column
+sizes, you must be careful about the column
+widths of your .rfk page elements, especially
+l_menu.rfk and l_filler.rfk. Currently this 
+requires padding out your l_* files to the 
+appropriate width, although in the future more
+of this should be handled automagically.
+
+The "main" pages are automatically padded out,
+and since the r_menu files are on the right-hand
+side of the page, it is not critical that they
+be padded on their right margins.
+
+That said, your l_* and r_* files <b>should</b> be
+<b>exactly</b> the width that is set in aw.conf by
+the options lcolwidth and rcolwidth. Your "main"
+documents must have no lines longer than the 
+ccolwidth option, or else they will "break out"
+and the r_* files will not be rendered. Try it
+and see -- notice that in directory listings, the
+r_menu disappears -- because it is too wide for 
+most ccolwidths. Rather than getting munged by
+the erratic column widths, asciiweb simply does
+not display them.
+
+It should also be noted that you are under no
+obligation to use l_* or r_* files at all -- 
+ASCIIweb will be perfectly happy to run with just
+a header and a footer. It's completely up to you.
+
+(In fact, if you plan to use form elements in your
+pages, you will probably have to skip the left
+and right elements -- hey, why not use a conf
+file to control that?!)
+
+<b>PITFALLS</b>
+<b>--------</b>
+
+There are a number of pitfalls that one runs into
+while writing .rfk files. 
+
+The first is, like any ASCII-art, the characters
+must line up properly, or they will not look 
+the way they're intended to. This isn't so hard
+-- you just set your favorite text editor to wrap
+at ccolwidth -- no problem. No problem, that is, 
+until you start adding HTML tags to your .rfk 
+files.
+
+You may have a perfectly nice looking .rfk page, 
+but when you start adding HTML for bolding and 
+colors it will make the justification look
+terrible in plain text. ASCIIweb does not count
+characters within HTML tags, so as long as your
+tags are correct, your justification will remain
+the way you leave it. You'll get used to it.
+
+THAT SAID, there is a final pitfall that is 
+perhaps the most annoying thing about writing
+.rfk files. 
+
+<b>LINEWRAPPING</b>
+<b>------------</b>
+
+ASCIIweb now has built-in line wrapping functionality, thanks to a patch from David Gardner!
+
+The linewrapping code wraps the center column at the <b>colwidth</b> setting and also breaks and
+reforms adjacent, wrapping lines into a single paragraph. If you want short, non-wrapped lines without breaks, simply add newlines at the end of each nonwrapped line, like so:
+
+asciiweb line wrap
+paragraphizes long lines
+but not the short ones
+
+The linewrapping code also leaves blank lines intact,
+
+like
+
+so.
+
+Linewrapping can be turned off by changing the value of <b>textwrap</b> in aw.conf or in <a href="http://tastytronic.net/asciiweb/install/aw.cgi?main=manual/conf.rfk">conf files</a>, which is important if you are intentionally breaking through the right column, or are using live directories, which typically are wider than your average ASCIIweb column.
+
+The code also gracefully handles HTML tags that cross line boundaries, which makes the following paragraph mostly obsolete, however we will leave it in for transition purposes:
+
+If you have an HTML tag that flows over a line
+break, you <b>*must*</b> close <a href="http://tastytronic.net/">the tag and</a>
+<a href="http://tastytronic.net/">reopen it</a> on the next line -- <a href="http://robotfindskitten.org/">or else the tag
+will extend through your entire rendered
+document and end</a> where the terminal tag is.
+This is almost certainly *not* the behavior
+you want. Remember, ASCIIweb does not have any 
+"hard" borders between it's text sections -- 
+it's all just &lt;pre&gt; tags.
+
+Sign up to <a href="http://tastytronic.net/cgi-bin/mailman/listinfo/asciiweb-dev/">our development list</a> if you would like to contribute to the development of ASCIIweb.
+
+
+Back:                                       Next:
+Configuring                              Security
+<a href="configuring.rfk">&lt;--</a>                                           <a href="security.rfk">--&gt;</a>
+ 

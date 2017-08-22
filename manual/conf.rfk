@@ -1,0 +1,98 @@
+                            .
+      ,-. ,-. ,-. ,"   ," . |  ,-. ,-.
+      |   | | | | |-   |- | |  |-' `-.
+      `-' `-' ' ' |    |  ' `' `-' `-'
+    --------------'----'----------------
+
+ASCIIweb has what at first may appear to be a
+strange customization system. 
+
+Any page that requires a configuration different
+from the site defaults has a special conf file
+in the directory "confs".
+
+For example, if you have a main page index.rfk
+for which the defaults are acceptable, but a 
+special page wacky.rfk which should have 
+radically different l_menu, r_menu, filler,
+footer, and header pages, you need to specify
+that information in a custom conf file.
+
+If the file in question is wacky.rfk, the conf
+file that affects it would be:
+
+confs/wacky.rfk.conf
+
+...and would look something like this:
+
+title= !!! this page is wacky !!!
+leftmenu=src/l_menu-wacky.rfk
+rightmenu=src/r_menu-wacky.rfk
+foot=src/wackyfoot.rfk
+head=src/wackyhead.rfk
+
+...etc. Any option available to aw.conf can be
+set in a custom config file.
+
+This allows for cool animations, where clicking
+on a link causes the link to change, or appear
+depressed, or open another set of options in a 
+custom l_menu, etc.
+
+<b>That said,</b> clever users will realize that
+these pages can also be defined by query string,
+sending links such as:
+
+aw.cgi?leftmenu=l_wacky.rfk&rightmenu=r_wacky.rfk
+
+...etc.
+
+This is perfectly acceptable, but is less
+flexible than using the conf file system.
+
+...or at least, is a much greater PITA than 
+using the conf system.
+
+ADDITIONALLY, if you intend to switch between
+dynamic or static page generation (or use both
+in one site), you <b>must not</b> use such query
+string hackery, as static mode ONLY examines the
+main parameter and conf files. This issue is 
+discussed further in the section on static mode.
+
+Finally, ASCIIweb's live directory feature
+presents a further complication. Should you want
+to have a live, "in-line" display of the 
+directory "foo/", you might also want the header
+or menus to reflect the contents of the 
+directory.
+
+This is accomplished with special conf files. 
+
+For the directory foo/ the file would be:
+
+confs/foo.conf
+
+For a further subdirectory:
+
+foo/bar/baz/
+
+...the conf file would be:
+
+confs/foo_bar_baz.conf
+
+Relatedly, sometimes you just want a *single*
+conf file to cover an entire directory tree.
+This is accomplished by creating a top-level
+conf file, and setting the aw.conf parameter:
+
+persistdirconf=1
+
+...the conf file will be loaded for all sub-
+directories.
+
+That's it!
+
+Back:                                       Next:
+Configuring                    Editing .rfk Files
+<a href="configuring.rfk">&lt;--</a>                                           <a href="editing.rfk">--&gt;</a>

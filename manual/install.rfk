@@ -1,0 +1,39 @@
+        .      .  .
+        . ,-. ,-. |- ,-. |  |  . ,-. ,-.
+        | | | `-. |  ,-| |  |  | | | | |
+        ' ' ' `-' `' `-^ `' `' ' ' ' `-|
+      --------------------------------,|--
+                                      `'
+Installing ASCIIweb is a snap. Simply download
+the tarball and unpack it in a directory that
+is web-accessible.
+
+Next, configure your web browser to allow 
+cgi scripts (if you want to run dynamically),
+and set aw.cgi as a acceptable DirectoryIndex.
+
+If you are planning to utilize embedded scripts,
+please rename the sample scriptdir to something
+unique. An .htaccess file should exist there
+denying web users from listing the contents of
+the directory. If one does not exist, create
+one (see the sample in the tarball).
+
+Finally, load your page! If everyting is 
+configured correctly, you should see a default
+ASCIIweb install. If you do not see the default
+ASCIIweb installation, then you unpacked ASCIIweb
+in the wrong directory, or your web server is 
+not properly configured.
+
+NOTE: If you do not require ASCIIweb to run in
+dynamic mode, or you do not have permission to
+run cgi scripts in your webspace, you may
+install ASCIIweb anywhere you like and 
+generate static pages which you would then 
+copy into your website.
+
+Back:                                       Next:
+Introduction                          Configuring
+<a href="intro.rfk">&lt;--</a>                                           <a href="configuring.rfk">--&gt;</a>
+ 

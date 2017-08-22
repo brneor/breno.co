@@ -1,0 +1,52 @@
+            
+            ,-. . . ,-. |- ,-. . ,
+            `-. | | | | |  ,-|  X
+            `-' `-| ' ' `' `-^ ' '
+            -----/|---------------
+                `-'
+<b>RFK FILES</b>
+<b>---------</b>
+
+The syntax of ASCIIweb is fairly straight-
+forward. rfk files (named for 
+robotfindskitten, the software package 
+ASCIIweb was originally designed for) are
+essentially a stripped down HTML. &lt;b&gt;, &lt;i&gt;, and
+&lt;a&gt; tags are legal, along with ASCIIweb's
+custom &lt;exec&gt; tag for page-includes.
+
+For URLs, ASCIIweb will qualify any URL it
+comes into contact with by adding the current
+path of the file the link is in to the beginning
+of the relative URL and feeding it back into 
+aw.cgi where appropriate. This is true in live 
+Apache directories and in regular files, as well 
+as in the window-dressing files, typically 
+located in the 'src' directory.
+
+This means that while relative links in
+documents need no "help," links in window-
+dressing do, specifically because they are not
+"relative" to the pages they link to. Thus,
+links in window dressing files must refer to 
+aw.cgi directly like so:
+
+&lt;a href="aw.cgi?main=thunder/rain.rfk"&gt;
+
+where thunder is adjacent to aw.cgi.
+
+&lt;exec&gt; tags are straightforward, too.
+Simply type &lt;exec="foo.pl"&gt; to execute
+the script foo.pl which must reside (as mentioned
+previously) in the scriptdir. Parameters can be
+passed to the script within the quotes.
+
+Likewise, full page includes
+
+
+
+
+
+
+Back: Security                       Next: Tricks
+<a href="security.rfk">&lt;--</a>                                           <a href="tricks.rfk">--&gt;</a>

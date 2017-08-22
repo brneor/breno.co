@@ -1,0 +1,33 @@
+                  WISHLIST
+
+future goals
+------------
+  
+  * consider incorporating .conf data into .rfk
+
+  * by-word, in-file linking a list of words or
+    phrases that are automatically linked when
+    the page is rendered. keeps html out of the 
+    asciiart.
+  
+  * Shell-style 'ls' directory view option 
+    instead of the apache-style indexes for 
+    local folders. (crackmonkey)
+  
+  * color effects, like horizontal and vertical 
+    color gradients and fades.
+  
+  * mod_virgule "module" for incorporating 
+    virgule diaries or projects into your 
+    asciiweb site.
+  
+  * NYCB "module" for displaying nycb using 
+    asciiweb as a sort of display filter.
+  
+  * optimizing routines
+  
+  * implement a fully-functional mailreader
+  
+
+
+<a href="http://tastytronic.net/asciiweb/aw.cgi?main=documents.rfk">&lt;&lt; go to online documentation...</a>

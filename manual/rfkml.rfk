@@ -1,0 +1,33 @@
+                    .         .
+             ,-. ," | , ,-,-. |
+             |   |- |<  | | | |
+             '   |  ' ` ' ' ' `'
+                 '
+RFKML (<a href="http://robotfindskitten.org/">RobotFindsKitten</a> Markup Language) is
+the markup language that ASCIIweb uses, and is
+named after the Free Software project for which
+ASCIIweb was originally designed. It is at this 
+time a minimal subset of HTML:
+
+     &lt;b&gt; -- <b>bold text</b>
+     &lt;u&gt; -- <u>underline</u>
+     &lt;font&gt; -- font (for adjusting color)
+
+     ... that's pretty much it.
+
+The only addition at this time is the exec tag:
+
+     &lt;exec="executable"&gt; -- execute this
+       embedded script if allowed.
+
+If a URL ending in .html is fed into ASCIIweb,
+it will attempt to convert it into an rfk file 
+as best as it can -- the above tags are allowed,
+and others (like bulleted lists) are converted
+into other forms. Feeding HTML into ASCIIweb is
+unpredictable and not recommended, although it 
+can make for interesting effects.
+
+Back: Staticmode                    Next: Credits 
+<a href="staticmode.rfk">&lt;--</a>                                           <a href="credits.rfk">--&gt;</a>
+

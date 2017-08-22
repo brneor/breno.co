@@ -1,0 +1,133 @@
+                 CHANGELOG
+
+old sk00l asciiweb
+------------------
+
+ASCIIweb version one was a series of scripts 
+that generated static pages.
+
+The current version of ASCIIweb is essentially a 
+rewrite and basically all "features" of asciiweb 
+were added since the original version was 
+finished.
+
+version 0.0-0.5
+---------------
+
+  * rewrote asciiweb as a cgi. added all 
+    features, including r_menus, fillers, and
+    colors.
+  
+  * wrote directory parsing routines
+
+version 0.6
+-----------
+
+  * fixed .conf file system to support
+    directories as well as .rfk files.
+
+  * added readcolor feature to allow 
+    separate color for the main text.
+
+version 0.65
+------------
+
+  * added "persistent" directory confs so
+    that a conf can persist down a dir
+    tree if the user wants one but doesn't
+    want to write a conf for each step of the 
+    tree. Persistence will be something to 
+    think about in the future.
+
+  * added comments to the .conf format and
+    prettied up the stock aw.conf. ahhhh.
+  
+  w
+  * Added the @messages debugging array that
+    I liked so much in Scribble.
+
+  * Added CGI::Carp so that fatals go to the
+    browser.
+
+  * Moved confs into a separate directory.
+
+version 0.66
+------------
+
+  * ASCIIweb now uses the 'strict' pragma
+    in an effort to tighten up the code.
+
+  * ASCIIweb now behaves intelligently when
+    users hose their configuration files.
+
+  * ASCIIweb now supports multidot
+    filenames in directory mode.
+
+version 0.70
+------------
+
+  * ASCIIweb now reads local files on STDIN
+    rather than through LWP! This provides
+    an almost 100% speed increase, not to
+    mention the load *decrease* since each
+    request is no longer being handled by
+    Apache! Beaujolais! (It can still use 
+    LWP if needed.)
+  
+  * ASCIIweb can now execute code and embed
+    it within page data or use it as page
+    data! This presents a certain security
+    risk; some users may wish to disable it.
+
+version 0.80
+------------
+
+  * ASCIIweb is now capable of static page
+    generation and now includes a utility,
+    'gp', to help with static page/site
+    generation.
+
+  * Fixed a security hole in that ASCIIweb 
+    would read *any* file from the 
+    filesystem that www-data could read,
+    including things like /etc/passwd.
+
+    ASCIIweb now includes a new parameter,
+    docdir, which is the highest
+    filesystem directory ASCIIweb will 
+    read from.
+
+versions 0.81-84a
+-----------------
+
+  * Important security enhancements and 
+    other minor fixes. PLEASE do not run
+    any version prior to 0.84a.
+
+version 0.85
+------------
+
+  * First public release.
+  * Full page includes now work again.
+
+version 0.86
+------------
+
+  * Fixed pesky directory download issue.
+  
+version 0.87
+------------
+
+  * Fixed some URL issues with directories
+    and downloadables. Added 'dressing' 
+    directive in aw.conf for configuring the
+    'src' directory of window dressing.
+  * included alpha version of 'gp' utility
+    for building static pages.
+
+version 0.90
+------------
+
+  * Linewrapping now functional thanks to David Gardner!!!
+
+<a href="http://tastytronic.net/asciiweb/aw.cgi?main=documents.rfk">&lt;&lt; go to online documentation...</a>
