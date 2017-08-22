@@ -7,7 +7,12 @@
   font-family: gohu14;
   src: url(../fonts/gohufont14.ttf);
 }
-.gohu {
+
+body {
+  text-align: center;
+}
+
+.gohu, * {
   font-family: gohu;
   font-size: 11px;
 }
@@ -15,4 +20,10 @@
 .gohu-14 {
   font-family: gohu14;
   font-size: 14px;
+}
+
+pre {
+  display: inline-block;
+  margin: auto;
+  text-align: left;
 }

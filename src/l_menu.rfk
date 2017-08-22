@@ -1,12 +1,8 @@
 .------------.
-| Welcome to |
-| ASCIIweb!  |
+| home       |
 '------------'
 .------------.
 | <a href="index.rfk">intro</a>      |
-'------------'
-.------------.
-| <a href="manual/intro.rfk">manual</a>     |
 '------------'
 .------------.
 | <a href="COPYING">license</a>    |

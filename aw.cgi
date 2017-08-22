@@ -35,6 +35,7 @@ my %options; # hash including all run-time program options
 
 # Default critical information in case the user's configs are wrong or absent.
 $options{title} = "An unconfigured ASCIIweb site! Check your configurations!";
+$options{css} = "css/style.css";
 $options{bgcolor} = "#ffffff";
 $options{text} = "#000000";
 $options{link} = "#ff0000";
@@ -162,6 +163,7 @@ if (param("main")) { # only do this if we're loading a non-default document in "
 
 my $script = $options{script}; # the url of this script
 my $title = $options{title}; # default title for this site
+my $css = $options{css}; # css declaration line (must be complete tag)
 my $wwwroot = $options{wwwroot}; # the root of this website (vhost/servername)
 my $localdir = $options{localdir}; # the directory in which the script resides
 my $head = $options{header}; # default ascii-art header
@@ -264,6 +266,7 @@ print <<END;
 
 <html><head>
 <title>$title</title>
+<link href="$css" rel="stylesheet" type="text/css" />
 </head>
 <body bgcolor="$bgcolor" text="$text" link="$link" alink="$alink" vlink="$vlink">
 
