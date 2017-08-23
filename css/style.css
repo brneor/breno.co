@@ -1,3 +1,5 @@
+@import url('colors.css');
+
 @font-face {
   font-family: gohu;
   src: url(../fonts/gohufont.ttf);
@@ -10,7 +12,32 @@
 
 body {
   text-align: center;
+  background-color: var(--background);
+  color: var(--foreground);
 }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: var(--color5);
+}
+
+.color0{ color: var(--color0); }
+.color1{ color: var(--color1); }
+.color2{ color: var(--color2); }
+.color3{ color: var(--color3); }
+.color4{ color: var(--color4); }
+.color5{ color: var(--color5); }
+.color6{ color: var(--color6); }
+.color7{ color: var(--color7); }
+.color8{ color: var(--color8); }
+.color9{ color: var(--color9); }
+.color10{ color: var(--color10); }
+.color11{ color: var(--color11); }
+.color12{ color: var(--color12); }
+.color13{ color: var(--color13); }
+.color14{ color: var(--color14); }
+.color15{ color: var(--color15); }
+
 
 .gohu, * {
   font-family: gohu;
