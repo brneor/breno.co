@@ -1,4 +1,6 @@
 @import url('colors.css');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 @font-face {
   font-family: gohu;
@@ -16,9 +18,28 @@ body {
   color: var(--foreground);
 }
 
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
-  color: var(--color5);
+a:focus { outline: 0; }
+
+.navbar-nav a {
+  color: var(--color3);  
+}
+
+.navbar-solarized .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(181, 137, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-solarized .navbar-toggler {
+  color: var(--color3);;
+  border-color: var(--color3);
+  outline: 0;
+}
+
+.navbar-solarized a:hover {
+  color: var(--color3);
+}
+
+.navbar {
+  z-index: 10;
 }
 
 .color0{ color: var(--color0); }
@@ -38,15 +59,32 @@ a:link, a:visited, a:hover, a:active {
 .color14{ color: var(--color14); }
 .color15{ color: var(--color15); }
 
+.bgcolor0{ background-color: var(--color0); }
+.bgcolor1{ background-color: var(--color1); }
+.bgcolor2{ background-color: var(--color2); }
+.bgcolor3{ background-color: var(--color3); }
+.bgcolor4{ background-color: var(--color4); }
+.bgcolor5{ background-color: var(--color5); }
+.bgcolor6{ background-color: var(--color6); }
+.bgcolor7{ background-color: var(--color7); }
+.bgcolor8{ background-color: var(--color8); }
+.bgcolor9{ background-color: var(--color9); }
+.bgcolor10{ background-color: var(--color10); }
+.bgcolor11{ background-color: var(--color11); }
+.bgcolor12{ background-color: var(--color12); }
+.bgcolor13{ background-color: var(--color13); }
+.bgcolor14{ background-color: var(--color14); }
+.bgcolor15{ background-color: var(--color15); }
 
-.gohu, * {
-  font-family: gohu;
-  font-size: 11px;
+* {
+  font-family: 'Fira Mono';
+  font-size: 14px;
 }
 
-.gohu-14 {
-  font-family: gohu14;
-  font-size: 14px;
+.fira-title {
+  font-family: 'Fira Mono';
+  font-size: 18px;
+  font-weight: 600;
 }
 
 pre {
@@ -55,3 +93,32 @@ pre {
   text-align: left;
   width: 500px;
 }
+
+.profile-pic-rounded {
+  border-radius: 50%;
+}
+
+.page {
+  bottom: 0; 
+  padding-top: 145px;
+  position: absolute; 
+  text-align: center;
+  top: 56px;  
+  width: 100%; 
+  z-index: 1;
+}
+
+/* Animações */
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeout {
+  100% { opacity: 0; }
+  0% { opacity: 1; }
+}
+
+.ng-enter { animation: fadein 0.5s both ease-in; z-index: 8888; }
+.ng-leave { animation: fadeout 0.5s both ease-in; z-index: 9999; }

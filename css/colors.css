@@ -1,24 +1,24 @@
 :root {
     /* Special */
-    --background: #1A2128;
-    --foreground: #E7D0C7;
+    --background: #002B36;
+    --foreground: #93a1a1;
     --cursor: #E7D0C7;
 
     /* Colors */
-    --color0: #1A2128;
-    --color1: #817F7D;
-    --color2: #748578;
-    --color3: #768985;
-    --color4: #9D9C91;
-    --color5: #DAB5A8;
-    --color6: #E7C2BA;
-    --color7: #E7D0C7;
-    --color8: #75797e;
-    --color9: #817F7D;
-    --color10: #748578;
-    --color11: #768985;
-    --color12: #9D9C91;
-    --color13: #DAB5A8;
-    --color14: #E7C2BA;
-    --color15: #E7D0C7;
+    --color0: #08323C;
+    --color1: #dc322f;
+    --color2: #859900;
+    --color3: #b58900;
+    --color4: #268bd2;
+    --color5: #6c71c4;
+    --color6: #2aa198;
+    --color7: #93a1a1;
+    --color8: #657b83;
+    --color9: #dc322f;
+    --color10: #859900;
+    --color11: #b58900;
+    --color12: #268bd2;
+    --color13: #6c71c4;
+    --color14: #2aa198;
+    --color15: #fdf6e3;
 }
